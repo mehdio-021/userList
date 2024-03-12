@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { IoCloseSharp } from "react-icons/io5";
-import osm from "./osm-providers";
-
+import "./leaflet.css";
 
 const UserLocation = ({ onClose }) => {
   const [center, serCenter] = useState({ lat: 13.084622, lng: 80.248357 });
@@ -18,11 +17,17 @@ const UserLocation = ({ onClose }) => {
         >
           <IoCloseSharp />
         </div>
-        <div style={{ width: "100%", height: "400px" }}>
-          <MapContainer center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
+        <div style={{ height: `50dvh` }}>
+          <MapContainer
+            center={[51.505, -0.09]}
+            zoom={ZOOM_LEVEL}
+            scrollWheelZoom={true}
+            style={{ height: `100%` }}
+            ref={mapRef}
+          >
             <TileLayer
-              url={osm.maptiler.url}
-              attribution={osm.maptiler.attribution}
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
           </MapContainer>
         </div>
