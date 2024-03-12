@@ -1,7 +1,7 @@
 import React from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const ShowUser = ({ user, onClose }) => {
   const handleDelete = async () => {
@@ -55,7 +55,7 @@ const ShowUser = ({ user, onClose }) => {
           </table>
           <button
             onClick={handleDelete}
-            className="bg-red-500 text-white px-3 py-1 rounded-lg mt-4"
+            className="bg-red-500 text-white px-3 py-1 rounded-lg mt-4 transition-transform duration-200 hover:scale-125"
           >
             حذف کاربر
           </button>

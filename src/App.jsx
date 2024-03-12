@@ -10,7 +10,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <HomePage />
-      <UserLocation />
     </QueryClientProvider>
   );
 }
