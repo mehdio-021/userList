@@ -1,0 +1,29 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+}
+#map {
+  height: 180px;
+}
+/*S for adding font */
+@font-face {
+  font-family: "Vazir";
+  src: url("/src/fonts/vazir/Vazir.eot") url("/src/fonts/vazir/Vazir.woff2")
+      format("woff2"),
+    url("/src/fonts/vazir/Vazir.woff") format("woff"),
+    url("/src/fonts/vazir/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*E for adding font */
